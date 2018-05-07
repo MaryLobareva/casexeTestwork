@@ -18,7 +18,7 @@
 			<div class="header-conn">
 				<span class="num">+7(499) 777-77-77</span>
 				<span class="num">+7(499) 777-77-77</span>
-				<button class="feedback">Обратная связь</button>
+				<button class="feedback" data-btn-popup>Обратная связь</button>
 			</div>
 		</div>
 	</header>
@@ -112,31 +112,31 @@
 			<div class="content-center">
 				<div class="catalog">
 					<a href="" class="catalog-item">
-						<img src="" alt="" class="catalog-item-img">
+						<div class="catalog-item-img"></div>
 						<p class="catalog-item-text">Самый клевый чайник, который надо купить!</p>
 						<p class="price">1 900 р.</p>
 						<i class="icon fas fa-cart-plus"></i>
 					</a>
 					<a href="" class="catalog-item">
-						<img src="" alt="" class="catalog-item-img">
+						<div class="catalog-item-img"></div>
 						<p class="catalog-item-text">Самый клевый чайник, который надо купить!</p>
 						<p class="price">1 900 р.</p>
 						<i class="icon fas fa-cart-plus"></i>
 					</a>
 					<a href="" class="catalog-item">
-						<img src="" alt="" class="catalog-item-img">
+						<div class="catalog-item-img"></div>
 						<p class="catalog-item-text">Самый клевый чайник, который надо купить!</p>
 						<p class="price">1 900 р.</p>
 						<i class="icon fas fa-cart-plus"></i>
 					</a>
 					<a href="" class="catalog-item">
-						<img src="" alt="" class="catalog-item-img">
+						<div class="catalog-item-img"></div>
 						<p class="catalog-item-text">Самый клевый чайник, который надо купить!</p>
 						<p class="price">1 900 р.</p>
 						<i class="icon fas fa-cart-plus"></i>
 					</a>
 					<a href="" class="catalog-item">
-						<img src="" alt="" class="catalog-item-img">
+						<div class="catalog-item-img"></div>
 						<p class="catalog-item-text">Самый клевый чайник, который надо купить!</p>
 						<p class="price">1 900 р.</p>
 						<i class="icon fas fa-cart-plus"></i>
@@ -181,6 +181,32 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="popUp" data-popup>
+		<div class="popUp-wrap">
+			<span class="title">Обратная связь</span>
+			<i class="icon far fa-window-close" data-popup-close></i>
+			<form action="" class="popUp-form">
+				<label for="email">Ваше имя *</label>
+				<input type="email" name ="email" id="email" placeholder="">
+
+				<label for="phone">Телефон *</label>
+				<input type="text" name="phone" id="phone" placeholder="">
+
+				<label for="name">Email *</label>
+				<input type="text" name="name" id="name" class="error" placeholder="Поле обязательно для заполнения">
+
+				<label for="text">Сообщение</label>
+				<textarea name="text" id="text"></textarea>
+				
+				<button class="btn">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="preloader">
+    	<div class="load"></div>
+  	</div>
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>

@@ -24,10 +24,14 @@ $bg-slider: #f8f8f8;
 $dark: #010101;
 $color-excel-text:#444444;
 $color-excel-icon: $bl;
+$bg-popup: #535353;
 
 $blue: #b4bbf4;
 $red: #ffd6b4;
 $green: #bbd5b4;
+
+$color-popup-error: #dc7f7f;
+$border-popup-error: #ff8383;
 
 
 
@@ -99,4 +103,11 @@ $xl: 1366px;
     @else if $media == large-xl-up {
       @media only screen and (min-width: $xl + 1) { @content; }
     }   
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
 }

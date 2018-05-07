@@ -154,6 +154,9 @@
 				display: inline-block;
 				font-size: 2em;
 			}
+			&-img img {
+				width: 100%;
+			}
 		}
 		&-article {
 			border-top: 1px solid $bg-nav;

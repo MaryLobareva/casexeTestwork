@@ -29,6 +29,9 @@ body {
 .main {
   flex: 1; }
 
+button:focus {
+  outline: none; }
+
 .header {
   background: #dcdcdc;
   padding: 3.2em 0 5.1em;
@@ -238,6 +241,8 @@ body {
         color: #ffffff;
         display: inline-block;
         font-size: 2em; }
+      .content .catalog-item-img img {
+        width: 100%; }
     .content .catalog-article {
       border-top: 1px solid #777777;
       display: flex;
@@ -405,3 +410,140 @@ body {
     left: 0; }
   .slider .owl-carousel div.owl-nav button.owl-next {
     right: 0; }
+
+.popUp {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(83, 83, 83, 0.5);
+  width: 100%;
+  height: 100vh;
+  transition: all 1s;
+  opacity: 0;
+  visibility: hidden; }
+  .popUp-wrap {
+    background: #ffffff;
+    opacity: 1;
+    min-width: 33.2em;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+    position: relative;
+    margin: 3em; }
+    @media only screen and (max-width: 639px) {
+      .popUp-wrap {
+        min-width: auto;
+        width: 100%;
+        padding: 1em; } }
+    .popUp-wrap .icon {
+      position: absolute;
+      top: 0;
+      right: -1.25em;
+      font-size: 2em;
+      color: #ffffff;
+      cursor: pointer; }
+    .popUp-wrap .title {
+      font-size: 1.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      color: #535353;
+      margin-bottom: 2.1rem; }
+    .popUp-wrap label {
+      text-align: center;
+      margin-top: 1em; }
+    .popUp-wrap label,
+    .popUp-wrap input {
+      display: block;
+      color: #535353;
+      font-weight: 400;
+      width: 100%; }
+    .popUp-wrap input,
+    .popUp-wrap textarea {
+      border: 1px solid #c3c3c3;
+      padding: 1em;
+      box-sizing: border-box; }
+      .popUp-wrap input::-webkit-input-placeholder,
+      .popUp-wrap textarea::-webkit-input-placeholder {
+        color: #535353; }
+      .popUp-wrap input:-moz-placeholder,
+      .popUp-wrap textarea:-moz-placeholder {
+        color: #535353; }
+      .popUp-wrap input::-moz-placeholder,
+      .popUp-wrap textarea::-moz-placeholder {
+        color: #535353; }
+      .popUp-wrap input:-ms-input-placeholder,
+      .popUp-wrap textarea:-ms-input-placeholder {
+        color: #535353; }
+      .popUp-wrap input.error,
+      .popUp-wrap textarea.error {
+        box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
+        border: 1px solid #ff8383; }
+        .popUp-wrap input.error::-webkit-input-placeholder,
+        .popUp-wrap textarea.error::-webkit-input-placeholder {
+          color: #dc7f7f;
+          font-style: italic; }
+        .popUp-wrap input.error:-moz-placeholder,
+        .popUp-wrap textarea.error:-moz-placeholder {
+          color: #dc7f7f;
+          font-style: italic; }
+        .popUp-wrap input.error::-moz-placeholder,
+        .popUp-wrap textarea.error::-moz-placeholder {
+          color: #dc7f7f;
+          font-style: italic; }
+        .popUp-wrap input.error:-ms-input-placeholder,
+        .popUp-wrap textarea.error:-ms-input-placeholder {
+          color: #dc7f7f;
+          font-style: italic; }
+      .popUp-wrap input:focus,
+      .popUp-wrap textarea:focus {
+        outline: none; }
+    .popUp-wrap textarea {
+      width: 100%;
+      min-height: 11em; }
+    .popUp-wrap .btn {
+      display: block;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 1.3em;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: .7em .5em;
+      background: #777777;
+      border: none;
+      margin-top: 0.7em;
+      line-height: 1;
+      cursor: pointer; }
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background: #777777;
+  transition: 1s;
+  visibility: visible;
+  opacity: 1; }
+  .preloader .load {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 10px solid #ffffff;
+    border-right-color: #b4bbf4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 1.5s spin infinite linear; }
+  .preloader.done {
+    opacity: 0;
+    visibility: hidden; }
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg); } }
