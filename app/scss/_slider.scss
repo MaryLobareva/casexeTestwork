@@ -1,0 +1,99 @@
+.slider {
+	background: $bg-slider;
+	&-wrap {
+		max-width: 1248px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		& .circle {
+			display: block;
+			position: absolute;
+			opacity: .5;
+			border-radius: 50%;
+			&.blue {background: $blue;}
+			&.green {background: $green;}
+			&.red {background: $red;}
+			&-1 {
+				width: 23em;
+				height: 23em;
+				bottom: -1em;
+			}
+			&-2 {
+				width: 12.85em;
+				height: 12.85em;
+				top: 3.5em;
+				left: 17.5em;
+			}
+			&-3 {
+				width: 21.4em;
+				height: 21.4em;
+				top: 3.7em;
+				left: 28.5em;
+			}
+			&-4 {
+				width: 16em;
+				height: 16em;
+				top: 5.2em;
+				right: 19em;
+			}
+			&-5 {
+				width: 12.85em;
+				height: 12.85em;
+				bottom: 1.57em;
+				right: 0;
+			}
+			&-6 {
+				width: 21.4em;
+				height: 21.4em;
+				right: 0;
+				top: -2.6em;
+			}
+		}
+	}
+	&-main {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		min-height: 28.6em;
+		&-item {
+			display: block;
+			list-style: none;
+			font-size: 7rem;
+			color: $bg-h;
+			line-height: 1;
+			text-shadow: 2px 2px 8px $color-h;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding-left: 11rem;
+			padding-right: 11rem;
+			box-sizing: border-box;
+			width: 100%;
+		}
+	}
+	& .owl-carousel {
+		& .owl-stage-outer {min-height: inherit;}
+		& .owl-stage {
+			position: relative;
+			min-height: inherit;
+			& .owl-item {min-height: inherit;}
+		}
+		& div.owl-nav {
+			& button.owl-prev,
+			& button.owl-next {
+				background: $bg-h;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				&:focus {outline: none;}
+				& span {
+					font-size: 3em;
+					color: $dark;
+					padding: 3px;
+				}
+			}
+			& button.owl-prev {left: 0;}
+			& button.owl-next {right: 0;}
+		}
+	}
+}

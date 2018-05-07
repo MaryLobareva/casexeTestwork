@@ -1,0 +1,43 @@
+.nav {
+	background: $bg-nav;
+	@include resp(tablet-down){
+		&-wrap {flex-direction: column;}
+
+		div &-item {
+			padding-top: 1em;
+			padding-bottom: 1em;
+			&-link {border: none;}
+		}
+	}
+	&-wrap {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+
+	}
+	&-item {
+		list-style: none;
+		padding-top: 1.85em;
+		padding-bottom: 1.85em;
+		box-sizing: border-box;
+		&-link {
+			display: inline-block;
+			color: $wh;
+			font-family: $text;
+			font-size: 2em;
+			font-weight: 400;
+			letter-spacing: 0.75px;
+			text-decoration: none;
+			border-left: 1px solid $wh;
+			padding-left: 1.57rem;
+			padding-right: 1.57rem;
+		}
+		&:first-child {
+			& .nav-item-link {border: none;}
+		}
+		&:hover {
+			& .nav-item-link {text-decoration: underline;}
+		}
+	}
+}

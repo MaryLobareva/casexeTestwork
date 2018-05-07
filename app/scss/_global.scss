@@ -1,0 +1,102 @@
+
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('../webfonts/opensans-condlight-webfont.eot');
+    src: url('../webfonts/opensans-condlight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/opensans-condlight-webfont.woff2') format('woff2'),
+         url('../webfonts/opensans-condlight-webfont.woff') format('woff'),
+         url('../webfonts/opensans-condlight-webfont.ttf') format('truetype'),
+         url('../webfonts/opensans-condlight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$text: 'PT Sans', sans-serif;
+$text-h: 'open_sanscondensed_light', sans-serif;
+
+$wh: #ffffff;
+$bl: #000000;
+$bg-h: #dcdcdc;
+$color-h: #767676;
+$bg-nav: #777777;
+$color-footer-icon: #d4d4d4;
+$bg-slider: #f8f8f8;
+$dark: #010101;
+$color-excel-text:#444444;
+$color-excel-icon: $bl;
+
+$blue: #b4bbf4;
+$red: #ffd6b4;
+$green: #bbd5b4;
+
+
+
+//
+// media
+//
+$xs: 400px;
+$sm: 640px;
+$md: 970px;
+$lg: 1170px;
+$xl: 1366px;
+
+@mixin resp($media) {
+
+	@if $media == mobile-xs {
+    	@media only screen and (max-width: $xs - 1) { @content; }
+  	}
+    @else if $media == mobile-xs-up {
+      @media only screen and (min-width: $xs + 1) { @content; }
+    }
+
+// sm
+    @else if $media == mobile {
+      @media only screen and (min-width: $xs + 1) and (max-width: $sm - 1) { @content; }
+    }
+    @else if $media == mobile-down {
+      @media only screen and (max-width: $sm - 1) { @content; }
+    }
+    @else if $media == mobile-up {
+      @media only screen and (min-width: $sm + 1) { @content; }
+    }
+// end sm
+// tablet
+    @else if $media == tablet {
+      @media only screen and (min-width: $sm + 1) and (max-width: $md - 1) { @content; }
+    }
+    @else if $media == tablet-down {
+      @media only screen and (max-width: $md - 1) { @content; }
+    }
+    @else if $media == tablet-up {
+      @media only screen and (min-width: $md + 1) { @content; }
+    }
+//end tablet
+// md
+    @else if $media == medium {
+      @media only screen and (min-width: $md + 1) and (max-width: $lg - 1) { @content; }
+    }
+    @else if $media == medium-down {
+      @media only screen and (max-width: $lg - 1) { @content; }
+    }
+    @else if $media == medium-up {
+      @media only screen and (min-width: $lg + 1) { @content; }
+    }
+//end md
+// lg
+    @else if $media == large {
+      @media only screen and (min-width: $lg + 1) and (max-width: $xl - 1) { @content; }
+    }
+    @else if $media == large-down {
+      @media only screen and (max-width: $xl - 1) { @content; }
+    }
+    @else if $media == large-up {
+      @media only screen and (min-width: $xl + 1) { @content; }
+    }
+//end lg
+    @else if  $media == large-xl-down {
+      @media only screen and (max-width: $xl - 1) { @content; }
+    }
+    @else if $media == large-xl-up {
+      @media only screen and (min-width: $xl + 1) { @content; }
+    }   
+}
