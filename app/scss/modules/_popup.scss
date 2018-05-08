@@ -9,6 +9,7 @@
 	transition: all 1s;
 	opacity: 0;
 	visibility: hidden;
+	z-index: 9;
 	&-wrap {
 		background: $wh;
 		opacity: 1;

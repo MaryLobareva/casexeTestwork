@@ -1,21 +1,28 @@
 .header {
 	background: $bg-h;
-	padding: 3.2em 0 5.1em;
+	padding: 3em 0 3em;
 	min-height: 16.5em;
 	box-sizing: border-box;
 	@include resp(mobile-down) {
-		&-wrap {flex-direction: column;}
+		&-wrap {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		div &-conn,
+		div &-logo {width: 100%;}
 		div &-conn {
 			& .feedback {float: left;}
+			& .num {text-align: left;}
 		}
 	}
 
 	&-wrap {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 	}
 	&-logo {
+		width: 50%;
 		&-img {
 			width: 273px;
 			height: 100px;
@@ -23,14 +30,16 @@
 		}
 	}
 	&-conn {
+		width: 50%;
 		& .num {
 			font-family: $text-h;
 			color: $color-h;
 			font-size: 2.85em;
 			font-weight: 400;
-			line-height: 3.28rem;
+			line-height: 3rem;
 			letter-spacing: 1px;
 			display: block;
+			text-align: right;
 		}
 		& .feedback {
 			color: $color-h;

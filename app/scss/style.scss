@@ -1,9 +1,14 @@
+
+
+
 @import "global";
 @import "base";
-@import "header";
-@import "nav";
-@import "main";
-@import "footer";
-@import "slider";
-@import "popup";
-@import "preloader";
+
+@import "layout/header";
+@import "layout/nav";
+@import "layout/main";
+@import "layout/footer";
+
+@import "modules/slider";
+@import "modules/popup";
+@import "modules/preloader";

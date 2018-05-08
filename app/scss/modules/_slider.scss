@@ -54,7 +54,7 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
-		min-height: 28.6em;
+		min-height: 27em;
 		&-item {
 			display: block;
 			list-style: none;
@@ -69,6 +69,10 @@
 			padding-right: 11rem;
 			box-sizing: border-box;
 			width: 100%;
+			@include resp(mobile-down) {
+				padding-left: 3rem;
+				padding-right: 3rem;
+			}
 		}
 	}
 	& .owl-carousel {
@@ -87,9 +91,10 @@
 				transform: translateY(-50%);
 				&:focus {outline: none;}
 				& span {
-					font-size: 3em;
+					font-size: 6em;
 					color: $dark;
 					padding: 3px;
+					line-height: .5;
 				}
 			}
 			& button.owl-prev {left: 0;}
